@@ -30,5 +30,10 @@
 
 - To run this app, click live github website link given below.
 
-##### Live link: 
 ####  Repo Link: 
+
+https://github.com/Aqeela66/tic-tac-toe-App
+
+
+##### Live link: 
+https://aqeela66.github.io/tic-tac-toe-App/
