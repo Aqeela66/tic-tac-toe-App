@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { calculateWinner } from '../helpers';
 import Board from './Board';
 
-const styles={
+cconst styles={
     width: '200px',
     margin:'20px auto',
 }
@@ -16,7 +16,7 @@ const Game=()=> {
         const timeInHistory =history.slice(0,stepNumber+1)
         const current = timeInHistory[stepNumber];
         const squares =[...current];
-       // const boardCopy =[...board]
+       
         //if user click an occupied square or if game is won,return
         if(winner || squares[i])
         return;
@@ -29,11 +29,11 @@ const Game=()=> {
     }
     const jumpTo=step=> {
         setStepNumber(step);
-        setXisNext(step % 2 ===0)
+        setXisNext(step % 2 === 0)
     }
    const renderMoves=()=> (
        history.map((__step,move)=>{
-           const destination =move ? `Go to move${move}` : 'Go to start';
+           const destination = move ? `Go to move${move}` : 'Start Game';
            return(
                <li key={move}>
                    <button onClick={()=> jumpTo(move)}>{destination}</button>
@@ -48,7 +48,7 @@ const Game=()=> {
         <>
         <Board  squares={history[stepNumber]} onClick={handleClick} />
        <div style={styles}>
-           <p>{winner ? 'winner:' + winner :'Next Player:' +(xIsNext ?'x': '0')}</p>
+       <p>{winner ? 'Winner: ' + winner :'Next Player: ' +(xIsNext ? 'x' : '0')}</p>
            {renderMoves()}
        </div>
         </>
