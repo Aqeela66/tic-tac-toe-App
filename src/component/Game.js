@@ -1,9 +1,11 @@
 import { useState } from 'react';
 
-import { calculateWinner } from '../helpers';
 import Board from './Board';
 
-cconst styles={
+import { calculateWinner } from '../helpers';
+
+
+const styles={
     width: '200px',
     margin:'20px auto',
 }
