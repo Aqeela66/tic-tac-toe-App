@@ -3,8 +3,14 @@ import React from 'react';
 import Game from './component/Game';
 
 function App() {
-  return (
+  return ( 
+    <> 
+    
+    
     <Game/>
+    
+    
+     </>
   );
 }
 
