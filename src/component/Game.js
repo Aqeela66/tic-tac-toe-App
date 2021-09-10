@@ -1,9 +1,7 @@
 import { useState } from 'react';
 
 import Board from './Board';
-
-import { calculateWinner } from '../helpers';
-
+import { calculateWinner } from './Helpers';
 
 const styles={
     width: '200px',
